@@ -4,6 +4,18 @@
 
 
 @section('content')
+	
+	@if(Session::has('user_created'))
+		<p class="bg-danger">{{session('user_created')}}</p>
+	@endif
+	
+	@if(Session::has('user_updated'))
+		<p class="bg-danger">{{session('user_updated')}}</p>
+	@endif
+	
+	@if(Session::has('deleted_user'))
+		<p class="bg-danger">{{session('deleted_user')}}</p>
+	@endif
 
 	<h1>Users</h1>
 	<table class="table">
